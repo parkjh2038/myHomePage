@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<title>JongHyeon's Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 85%;
+  line-height: 1.8;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	width: auto;
+}
+.mtitle {
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  line-height: 90px;
+}
+
+.intro {
+  color:#fff;
+  background-color: rgb(122, 122, 122);
+}
+
+.ti {
+  text-align: center;
+  font-size: 100px;
+  line-height: 90px;
+  font-weight: 900;
+}
+
+.bgimg-1 {
+  background-position: top;
+  background-size: cover;
+  background-image: url("../img/pmain.gif");
+  min-height: 100%;
+  background-attachment: fixed;
+}
+
+p{
+  font-family: '나눔고딕';
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(77, 77, 77);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 25px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.signup:hover {
+	color: red;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="../index.html" class="w3-bar-item w3-button w3-wide"><img src="../img/logo.png" alt="로고이미지" width="98px" height="100%" ></a>
+    <div class="w3-right w3-hide-small">
+      <a href="profile.html" class="w3-bar-item w3-button">About Me</a>
+      <a href="#road" class="w3-bar-item w3-button">Road Map</a>
+      <a href="picture.html" class="w3-bar-item w3-button">Pictures</a>
+      <a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button">Login</a>
+    </div>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">X</a>
+	<a href="profile.html" onclick="w3_close()" class="w3-bar-item w3-button">About Me</a>
+	<a href="#road" onclick="w3_close()" class="w3-bar-item w3-button">Road Map</a>
+	<a href="picture.html" onclick="w3_close()" class="w3-bar-item w3-button">Pictures</a>
+	<a onclick="document.getElementById('id01').style.display='block', w3_close()" class="w3-bar-item w3-button">Login</a>
+  </nav>
+
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+	<div style="padding-top:10%">
+		<h1 class="mtitle" style="font-size:100px;">PARK JONG HYEON</h1>
+		<h3 class="mtitle">초보 개발자</h3>
+	</div> 
+</header>
+
+<div class="intro" style="padding:50px 16px">
+		<div class="w3-row-padding">
+      <div class="w3-col m6" >
+        <img class="w3-image" src="../img/myface.png" width="700" height="394">
+      </div>
+		  <div class="w3-col m6" style="padding: 6%">
+      <h1>PROFILE</h1>
+      <p>출　생 : 1995년 12월 06일<br>
+         출생지 : 대한민국 충남 태안<br>
+         나　이 : 25세<br>
+         연락처 : 010-2355-2038<br>
+         이메일 : pjh950312@naver.com<br>
+         학　력 : 목원대학교 4학년 재학중<br>
+      </p>
+      <p>개발자를 꿈꾸며 열심히 공부하고 있는 박종현입니다.<br>
+      어려서부터 컴퓨터에 관심이 많았던 저는 사진을 편집하거나 동영상 및 음악 파일을 편집해
+      보는 등 다양한 프로그램들을 사용하며 노는 것을 좋아했습니다.<br>
+      현재는 KH정보교육원에서 교육을 받고있습니다. </p>
+		  </div>
+		</div>
+	 </div>
+
+<div class="w3-container" style="padding-top:164px">
+    <h3 class="w3-center">HOBBY</h3>
+    <p class="w3-center w3-large">취미</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa-gamepad w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">GAME</p>
+        <p>RPG나 FPS류 게임을 주로 플레이합니다.<br>요즘은 간단한 콘솔게임이나 AOS게임을 하고 있습니다.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-film w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">MOVIE</p>
+        <p>영화나 드라마를 보는것을 좋아합니다.<br>판타지나 액션, SF장르를 즐겨봅니다.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-fire w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">COOKING</p>
+        <p>요리하는 것을 좋아합니다.<br>요즘은 칵테일 제조에 흥미가 있습니다.</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-camera-retro w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">PICTURE</p>
+        <p>사진찍는 것을 좋아합니다.<br>아직은 DSLR이 없어 슬픕니다.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="w3-container" style="padding-bottom: 128px">
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6">
+        <img src="../img/game1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="로스트아크">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="../img/game2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="몬스터헌터">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="../img/cooking1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="버터 감자구이">
+      </div>
+      <div class="w3-col l3 m6">
+        <img src="../img/cooking2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="팬케이크">
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+  
+  <div class="intro" style="padding:50px 16px" id="road">
+    <div>
+      <p class="ti">ROAD MAP</p>
+    </div>
+    <div style="text-align: center">
+      <img class="w3-image w3-round-large" src="../img/roadmap.PNG" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+
+  <div id="id01" class="modal">
+		<form class="modal-content animate">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="container">
+				<h1>로그인</h1>
+				<hr>
+				
+				<label><b>아이디</b></label> <input type="text" placeholder="아이디 입력" name="userId" id="userId">
+				<label><b>비밀번호</b></label> <input type="password" placeholder="비밀번호 입력" name="password" id="password">
+
+				<button onclick="return loginBtn();">로그인</button>
+				<label><input type="checkbox" checked="checked" name="remember"> 아이디 저장</label>
+			</div>
+
+			<div class="container" style="background-color: #f1f1f1">
+				<a class="signup"
+					onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'">회원가입</a>
+			</div>
+		</form>
+	</div>
+
+
+	<div id="id02" class="modal">
+		<form class="modal-content">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<div class="container">
+				<h1>회원가입</h1>
+				<hr>
+				<label><b>아이디</b></label>
+				<input type="text" placeholder="영소문자 또는 숫자로된  4~12자" name="userid" id="userid">
+				<label><b>비밀번호</b></label>
+				<input type="password" placeholder="영문자 또는 숫자로된  6~18자" name="pass" id="pass">
+				<label><b>비밀번호 확인</b></label>
+				<input type="password" placeholder="영문자 또는 숫자로된  6~18자" name="passCheck" id="passCheck">
+				<label><b>이름</b></label>
+				<input type="text" placeholder="이름 2글자 이상 입력" name="name" id="name">
+				<label><b>이메일</b></label>
+				<input type="text" placeholder="example@x.xxx" name="email" id="email">
+				
+				
+				<p>회원가입에 동의 하십니까?<input type="checkbox" id="agree" style="margin-left: 15px">동의</p>
+				<div class="clearfix">
+					<table>
+						<tr>
+							<td>
+								<button type="submit" onclick="return signUpBtn()">가입</button>
+							</td>
+							<td>
+								<button type="reset" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">취소</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Made by 박종현</p>
+  <div class="w3-xlarge w3-section">
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+		<a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+		<a href="https://www.pinterest.co.kr/"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+		<a href="https://twitter.com/"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+		<a href="https://kr.linkedin.com/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+	  </div>
+</footer>
+ 
+<script>
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+function loginBtn() {
+	var userid = document.getElementById("userId").value;
+	var password = document.getElementById("password").value;
+
+	if(/^\w{1,}$/.test(userid)) {
+		if(/^\w{1,}$/.test(password)){
+			alert("로그인 성공!");
+			return true;
+		}else{
+			alert("비밀번호를 입력해주세요.");
+			return false;
+		}
+	}else{
+		alert("아이디를 입력해주세요.");
+		return false;
+	}
+	
+}
+
+function signUpBtn() {
+	var userid = document.getElementById("userid").value;
+	var pass = document.getElementById("pass").value;
+	var passCheck = document.getElementById("passCheck").value;
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var check = document.getElementById("agree");
+	
+	var regId = /^[a-z][a-z0-9]{3,11}$/;
+	var regPass = /^[A-Za-z0-9\[\]{}()<>?|`~!@#$%^&*-_+=,.;:]{6,18}$/;
+	var regName = /^[가-힝]{2,}$/;
+	var regEmail = /\w{4,}[@]\w{1,}[.]\w{1,3}/;
+	
+	if(regId.test(userid) && /[0-9]+/.test(userid)){
+		if(regPass.test(pass)){
+			if(pass == passCheck){
+				if(regName.test(name)){
+					if(regEmail.test(email)){
+						if(check.checked) {
+							alert("회원가입 완료.")
+							return true;
+						}else{
+							alert("동의하지 않았습니다.")	
+							return false;
+						}
+					}else{
+						alert("이메일을 바르게 입력해주세요.")
+						return false;
+					}
+				}else{
+					alert("이름을 바르게 입력해주세요.")
+					return false;
+				}
+			}else{
+				alert("비밀번호가 일치하지 않습니다.");
+				return false;
+			}
+		}else{
+			alert("비밀번호를 바르게 입력해주세요.");
+			return false;
+		}
+	}else{
+		alert("아이디를 바르게 입력해주세요.");
+		return false;
+	}
+}
+</script>
+
+</body>
+</html>
