@@ -29,7 +29,7 @@ i {
   		<p class="mg">Made by 박종현</p>
   		<div class="mg">
 			<a href=""><i class="large envelope icon"></i></a>
-			<a href=""><i class="large github icon"></i></a>
+			<a href="https://github.com/parkjh2038"><i class="large github icon"></i></a>
 			<a href=""><i class="large facebook icon"></i></a>
 			<a href=""><i class="large twitter icon"></i></a>
 		</div>
